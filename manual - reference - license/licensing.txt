@@ -1,0 +1,21 @@
+Licensing
+
+---
+
+The up-to-date Licensing and Terms of Service for Open Text Engine may only be found
+in the latest release of Open Text Engine. Even if you possess an older version, the
+Licensing and Terms of Service of the most recent version applies.
+
+---
+
+I reserve the right to, at any time, implement your plugin or suggested edit into
+a / the main release version(s).
+
+---
+
+
+You may edit, execute, and publish this code freely assuming you credit me properly.
+
+---
+
+Open Text Engine is developed independently by Terabytic.

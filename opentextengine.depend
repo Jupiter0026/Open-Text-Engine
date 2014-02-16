@@ -1,0 +1,124 @@
+# depslib dependency file v1.0
+1370303915 source:c:\users\syd\desktop\various\c++ projects\medievaladventuretext\main.cpp
+	<iostream>
+	<cstdlib>
+
+1379972375 source:c:\users\syd\desktop\various\more\c++ projects\medievaladventuretext\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	"page.h"
+	"player.h"
+	"extra.h"
+
+1379970358 source:c:\users\syd\desktop\various\more\c++ projects\medievaladventuretext\page.cpp
+	<iostream>
+	<cstdlib>
+	"page.h"
+
+1379972375 c:\users\syd\desktop\various\more\c++ projects\medievaladventuretext\page.h
+	<string>
+
+1378771044 c:\users\syd\desktop\various\more\c++ projects\medievaladventuretext\player.h
+	<string>
+
+1378771115 source:c:\users\syd\desktop\various\more\c++ projects\medievaladventuretext\player.cpp
+	<iostream>
+	<cstdlib>
+	"player.h"
+
+1377559850 c:\users\syd\desktop\various\more\c++ projects\medievaladventuretext\extra.h
+	<string>
+
+1379970674 source:c:\users\syd\desktop\various\more\c++ projects\medievaladventuretext\extra.cpp
+	<iostream>
+	<cstdlib>
+	"extra.h"
+	"page.h"
+
+1381796310 source:c:\users\syd\desktop\various\open text engine\medievaladventuretext\page.cpp
+	<iostream>
+	<cstdlib>
+	"page.h"
+
+1381796310 c:\users\syd\desktop\various\open text engine\medievaladventuretext\page.h
+	<string>
+
+1380712591 source:c:\users\syd\desktop\various\open text engine\medievaladventuretext\player.cpp
+	<iostream>
+	<cstdlib>
+	"player.h"
+
+1380712591 c:\users\syd\desktop\various\open text engine\medievaladventuretext\player.h
+	<string>
+
+1381796074 source:c:\users\syd\desktop\various\open text engine\medievaladventuretext\extra.cpp
+	<iostream>
+	<cstdlib>
+	"extra.h"
+	"page.h"
+
+1377559850 c:\users\syd\desktop\various\open text engine\medievaladventuretext\extra.h
+	<string>
+
+1381770717 source:c:\users\syd\desktop\various\open text engine\medievaladventuretext\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	"page.h"
+	"player.h"
+	"extra.h"
+	"parser.h"
+
+1380574309 c:\users\syd\desktop\various\open text engine\medievaladventuretext\parser.h
+
+1381795977 source:c:\users\syd\desktop\various\open text engine\medievaladventuretext\parser.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<fstream>
+	"page.h"
+
+1382053913 source:c:\users\syd\desktop\various\open text engine\versions\v4\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	"page.h"
+	"player.h"
+	"extra.h"
+	"parser.h"
+
+1381796310 c:\users\syd\desktop\various\open text engine\versions\v4\page.h
+	<string>
+
+1380712591 c:\users\syd\desktop\various\open text engine\versions\v4\player.h
+	<string>
+
+1377559850 c:\users\syd\desktop\various\open text engine\versions\v4\extra.h
+	<string>
+
+1380574309 c:\users\syd\desktop\various\open text engine\versions\v4\parser.h
+
+1381838700 source:c:\users\syd\desktop\various\open text engine\versions\v4\page.cpp
+	<iostream>
+	<cstdlib>
+	"page.h"
+
+1382054160 source:c:\users\syd\desktop\various\open text engine\versions\v4\parser.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<fstream>
+	"page.h"
+
+1380712591 source:c:\users\syd\desktop\various\open text engine\versions\v4\player.cpp
+	<iostream>
+	<cstdlib>
+	"player.h"
+
+1381796074 source:c:\users\syd\desktop\various\open text engine\versions\v4\extra.cpp
+	<iostream>
+	<cstdlib>
+	"extra.h"
+	"page.h"
+

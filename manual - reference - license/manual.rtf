@@ -1,0 +1,188 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 System;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sl276\slmult1\lang9\f0\fs36 Open Text Engine Manual and Basic Guide\par
+\par
+\fs20 Document Last Updated / Edited / Revised: 10/16/2013\par
+Open Text Engine is created by Syd Boyle V, and is found at: {\field{\*\fldinst{HYPERLINK "http://terabytic.com/page/open-text-engine/"}}{\fldrslt{\ul\cf1 http://terabytic.com/page/open-text-engine/}}}\f0\fs20 .\par
+\fs36\par
+\fs22 Welcome to the Open Text Engine Manual and Basic Guide, the all-in-one guide to learning how to program in Open Text Engine (OTE). This guide's main purpose is not to be used as a full reference of every command, nook, and cranny of OTE in a neat and organized fashion, but rather, a beginning-to-end step-by-step guide to teach you how to program in OTE. For a full reference containing all information in said neat and organized fashion, please refer to the reference.rtf file.\par
+\par
+Open Text Engine's purpose is, obviously, not to reinvent the wheel of how games are thought about into infinity. Rather, it's meant as an understandable and all-in-one-place resource for creating text adventure games. From what I've found from personal experience, while searching for open source text adventure engines written in C++ that are console-based, is that information and files, whilst exists, is / are very often spread about and fragmented - whether that be through some desultory forum post or an overly complicated (or even simplified) set of instructions or files only one with prior C++ knowledge would understand. I aim to change that with OTE.\par
+\par
+Please. Use OTE for anything you wish. Whether that be sifting through the source code in hopes of learning (\fs18 no promises that I produce code with good programming habits!\fs22 ), creating a game to show off to your friends (\fs18 and pretend like you wrote it from the ground up in C++\fs22 ), or you, for some reason, are genuinly passionate about creating a program that reminds you of the 90's. In all seriousness though, please, use OTE for whatever you please assuming it follows OTE's Licensing and Terms of Service (\fs18 found in licensing.txt\fs22 ). I've done my best to keep it as unrestricted and small as possible.\par
+\par
+Note: I've made Open Text Engine open source for two reasons:\par
+\par
+1: Nobody would show any interest whatsoever if it wasn't.\par
+2: To allow for plugins, recommended edits, etc.\par
+\par
+Please, do not sweat making suggestions! They help! If you're a C++ programmer who's created a plugin for OTE, send me an email (\fs18 at terabytic@null.net\fs22 ), and if I find it suitable, it will be posted as an offical file on the website. Also send your suggestions there.\par
+\par
+I should also preface that Open Text Engine is a learning experience for me. As mentioned earlier, I make no promises that I produce code with good programming habits. In fact, I'm entirely certain I am doing many things wrong. \fs26 Just another reason why suggestions help!\fs28\par
+\fs22\par
+Finally, I should mention that Open Text Engine is in its very early stage of development. My goal upon completion is to of created an extremely intricate and powerful text adventure engine. Oh, and, must I say this: \fs26 just another reason why suggestions help!\fs22\par
+\par
+Open Text Engine is developed to be programmable even for those who don't know the engine's core language, C++. This Manual and Basic Guide will teach you OTE's syntax, and hopefully give you a good understanding of the language.\par
+\par
+This manual and guide will not cover the steps to manipulate and alter the code behind the parser - if you're interested in altering said behind-the-scenes code, you have to work for yourself.\par
+\par
+All code examples are in the \b\f1 System\b0\f0  font (\fs18 may simply be bold if you're .rtf viewer doesn't recognize System\fs22 ).\par
+\par
+In Open Text Engine, your game is written within the game.ote file. Open that before proceeding.\par
+\par
+In the Open Text Engine language, all statements (Lines of code which say to do something) begin with the @ symbol. As a basic example,\par
+\par
+\b\f1 @addpage\f0\par
+\par
+\b0 Any text which's line doesn't begin with the @ symbol is Content Text or invalid text.\par
+\par
+Content Text is text that will be printed onscreen for your game (In the CMD). For example,\par
+\par
+\b\f1 Hello! My name is William!\b0\f0\par
+\par
+Content Text has little to no restrictions, meaning you can use tabs, new lines, etc. Here are a couple examples of page styles people might write in.\par
+\par
+\b\f1 As you regain consciousness on the cold tracks, you see in the distance a steam engine barreling towards you despite all brakes being applied.\b0\f0\par
+\par
+or\par
+\par
+\tab\b\f1 As you regain consciousness on the cold tracks, you see in the distance a steam\par
+\b0\f0\par
+\b\f1  engine barreling towards you despite all brakes being applied.\par
+\b0\f0\par
+With those concepts out of the way, let's move on to specifics.\par
+\par
+Pages are the core elements in which your game will use to navigate. A page is a place\par
+in your story possibly containing choices, variables, and other commands or\par
+Content Text. If you have two rooms, you have two pages.\par
+\par
+To declare the creation of a new page use \par
+\par
+\b\f1 @addpage name\b0\f0\par
+\par
+The name can be anything that hasn't been previously created. It's what is used to be pointed to for choices. More about choices later.\par
+\par
+Upon creating a page, you can then write the Content Text. Here is a typical page creation and page description.\par
+\par
+\b\f1 @addpage\b0\f0\par
+\par
+\b\f1 You enter the arena. Surrounding you are the vicious, ruthless, and psychotic Eastern Maggot bandits. You immediately come to the realization fighting is not an option.\par
+\b0\f0\par
+Now that a page has been created it's time to add choices.\par
+\par
+Choices work in the following fashion:\par
+\par
+\b\f1 @addchoice What you want the choice to say | whatpagetogo\b0\f0\par
+\tab\tab\tab                                           \fs18 Pipe ^\par
+\fs22\par
+Do not specify what to press in order to go to the desired page - it's automatically filled in based on order of appearance of @addchoice(s).\par
+\par
+This:\par
+\b\f1 @addchoice To attack Mr. Smithinston | attacksmith\par
+@addchoice To attack Mr. Washington | attachwash\b0\f0\par
+\par
+Will print as:\par
+\b\f1 To attack Mr. Smithinston press 1.\par
+To attack Mr. Washington press 2.\b0\f0\par
+\par
+\par
+Choices are native only to the page in which they're related, and may come either before or after your page description. Positioning is irrelevant. Example.\par
+\par
+\b\f1 @addpage\par
+\par
+"Today we dine in hell!" yells your commander. Moments later, all units charge towards the enemy.\par
+\par
+@addchoice To charge alongside them | charge\par
+@addchoice To stab your commander | stab\line\b0\f0\par
+and\par
+\par
+\b\f1 @addpage\par
+\par
+@addchoice To charge alongside them | charge\par
+@addchoice To stab your commander | stab\par
+\par
+"Today we dine in hell!" yells your commander. Moments later, all units charge towards the enemy. \b0\f0 are both valid.\par
+\par
+Anything within an @addpage is just within the @addpage.\par
+\par
+By default, you can have a maximum of 9 choices per page.\par
+\par
+Below is an example game using what we've learnt so far.\par
+\par
+\b\f1 @addpage start\par
+\par
+Months have passed since the shipwreck. As time has crept forward, your homesickness has slowly faded into nothingness. You have come to call the island your home and your fellow shipmates your family.\par
+\par
+Troubles have seemingly avoided the stranded crew. In your time on the island, not one person has even gotten sick. Not once has anyone been attacked by a wild animal, which happen to be abundant on the island.\par
+\par
+"GReeeAaaaahhh!!!" you hear in the distance. You drop your fishing rod, which hasn't yielded any fish anyways.\par
+\par
+@addchoice To run towards the sound | runsound\par
+@addchoice To run away from the sound | runaway\par
+\par
+@addpage runaway\par
+\par
+You trip on a rock, hit your head, and die. Game over.\par
+\par
+@addpage womanhealth\par
+\par
+The very moment you turn over the body, you are shot with confusion. It's made out of carved wood.\par
+\par
+@addchoice To hide in nearby bushes | hidebushes\par
+@addchoice To advance into the forest | enterforest\par
+\par
+@addpage ignoreorb\par
+\par
+You manage to resist the orb's majesticness and continue on. Chapter Two coming soon!\par
+\par
+@addpage screamhelp\par
+\par
+As you scream for help, it strangely begins to rain. Heavily.\par
+\par
+@addchoice To see if the woman is okay | womanhealth\par
+@addchoice To advance into the forest to avoid the rain | enterforest\par
+\par
+@addpage hidebushes\par
+\par
+Uh-oh! You've made the mistake of stepping into an extrasharp blackberry bush.\par
+\par
+Game over!\par
+\par
+@addpage enterforest\par
+\par
+After travelling for several minutes into the forest in hopes of finding the source of the sound, you find a bird's nest laying on the ground. In the nest is a majestic shimmering orb - what you suspect to be an egg of sorts.\par
+                                                   \par
+It is making a faint and constant hissing sound.\par
+\par
+@addchoice To pick the orb up | pickuporb\par
+@addchoice To ignore the orb and continue | ignoreorb\par
+\par
+@addpage runsound\par
+\par
+As you approach the forested area in which you heard the sound, you see the body of a woman face down in the dirt.\par
+\par
+@addchoice To see if the woman is okay | womanhealth\par
+@addchoice To scream for help | screamhelp\par
+@addchoice To hide in nearby bushes | hidebushes\par
+\par
+\par
+@addpage pickuporb\par
+\par
+As you extend your arm to grab the orb, your arm begins to feel extremely weak. Soonafter, you lose all muscle capability with your arm. To further your panic, you start feeling extremely nausious. It's at that point you determine grabbing the orb isn't the best plan of action. Too late, you die. Game over.\b0\f0\par
+\par
+I have purposefully disorganized the ordering of the pages to demonstrate that it's irrelivent of their positioning. What matters is that the page exists you're pointing to - not that it's after. However, as you may of noticed whilst trying to follow the story, that it's somewhat of an annoyance to have to search around for a page. That's why I often choose to write my code with \i some \i0 sort of self-imposed rules. How you format, though, is entirely up to you.\par
+\par
+You may of also noticed some pages contain no choices. When a page contains no choices, it's considered a dead end. Often used for ending the game.\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 

@@ -1,0 +1,40 @@
+@addpage start
+"Holy shit, I'm gay!" you realize all of a
+sudden. You feel the sudden urge to jump off
+a cliff. By chance, you are next to one.
+
+@addchoice To jump off the cliff | jump
+@addchoice To NOT jump off the cliff | donotjump
+
+@addpage jump
+You jump, breaking every bone in your body. GRrkakaaaaahh!!
+
+@addchoice To bite your tongue | bitetongue
+@addchoice to shit on the ground | shitground
+
+@addpage bitetongue
+You bite your tongue and bleed to death. Game over.
+
+@addpage shitground
+You fail to shit on the ground because you are
+wearing pants. You shit your pants.
+
+@addpage donotjump
+You come to your senses and decide jumping is a bad idear. Success!
+
+@addpage To celebrate | celebrate
+@addpage To jump off the cliff anyways | jump
+
+@addpage celebrate
+You celebrate. Not much to say, eh?
+
+You feel the need to go to the bathroom.
+
+@addchoice To poo | poo
+@addchoice To pee | pee
+
+@addpage poo
+You take a dump, game over. Oh, and you die.
+
+@addpage pee
+You die of explosive PEE! Game over, bitch!
